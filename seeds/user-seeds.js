@@ -4,20 +4,20 @@ const userData = [{
         id: 1,
         username: 'Pat',
         email: "pat@pat.com",
-        password: '1234'
+        password: 'pass1234'
 
     },
     {
         id:2,
         username: 'Ben',
         email: "ben@ben.com",
-        password: '1234'
+        password: 'pass1234'
     },
     {
         id:3,
         username: 'Zach',
         email:"zac@attack.com",
-        password: '4321'
+        password: 'pass1234'
     }
 ];
 
