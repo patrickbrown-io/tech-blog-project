@@ -1,7 +1,11 @@
 const sequelize = require('../config/connection');
+
 const { Post, User, Comment } = require('../models');
 const router = require('express').Router();
+
+    //  GET route for all posts
 router.get('/', (req, res) => {
+    
     Post.findAll({
             attributes: [
                 'id',
@@ -33,6 +37,7 @@ router.get('/', (req, res) => {
         });
 });
 
+    //  Login route
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -41,11 +46,14 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+    //  Signup route
 router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+    //  GET post by ID
 router.get('/post/:id', (req, res) => {
+
     Post.findOne({
             where: {
                 id: req.params.id
@@ -86,7 +94,10 @@ router.get('/post/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+//  GET Post-comments
 router.get('/posts-comments', (req, res) => {
+
     Post.findOne({
             where: {
                 id: req.params.id
@@ -111,6 +122,7 @@ router.get('/posts-comments', (req, res) => {
                 }
             ]
         })
+
         .then(dbPostData => {
             if (!dbPostData) {
                 res.status(404).json({ message: 'No post found with this id' });
