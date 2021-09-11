@@ -9,7 +9,7 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const routes = require("./controllers");
   //  SEQUELIZE
 const sequelize = require("./config/connection");
-const helpers = require("./utils/helpers");
+const helpers = require("./util/helpers");
   //  SERVER
 const app = express();
 const PORT = process.env.PORT || 3001;
