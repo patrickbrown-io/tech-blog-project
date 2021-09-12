@@ -13,7 +13,7 @@ This is a full-stack tech blog web application. Unfortunately, I was not able to
 
 ## Usage
 
-To run: - Use mySQL to run the schema in the db directory. - In Node, enter 'npm run seed' to seed the database - After seeding, npm run start or navigate to the root and 'Node server.js'
+To run: - Use mySQL to run the schema in the db directory. - In Node, enter 'npm run seed' to seed the database - After seeding, npm run start or navigate to the root and 'Node server.js'.
 
 ![Screenshot of Local Deployment](assets\screenshot.jpg)
 
